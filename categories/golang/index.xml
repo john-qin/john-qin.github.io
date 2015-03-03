@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on JOHN QIN, a father of two</title>
+    <link>http://localhost:1313/categories/golang/</link>
+    <description>Recent content in Golang on JOHN QIN, a father of two</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 03 Mar 2015 06:57:58 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Moving from Ghost to HUGO</title>
+      <link>http://localhost:1313/moving-from-ghost-to-hugo/</link>
+      <pubDate>Tue, 03 Mar 2015 06:57:58 -0500</pubDate>
+      
+      <guid>http://localhost:1313/moving-from-ghost-to-hugo/</guid>
+      <description>&lt;p&gt;I started to blog 11 years ago. The first blog system i used, was Dotclear, I moved to Wordpress few years after because of the large plugin and theme ressources available. Wordpress is a really good blog platform, but it updates itslef too often for me.&lt;/p&gt;
+
+&lt;p&gt;Few months ago, the blog moved to Ghost, a really minimalist blog system, based on nodejs. A KISS aproach to the blog, I falled in love. The only issue i had with Ghost was about the hosting dependencies, no hard to manage, but since i don’t master nodeJs, i spent too much hours to hack into.&lt;/p&gt;
+
+&lt;p&gt;I discovered HUGO. Hugo is a static blog generator, written with a language (GOLANG), i use everyday.&lt;/p&gt;
+
+&lt;p&gt;So, i moved from GHOST to HUGO hosted on Google App engine.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
