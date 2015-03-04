@@ -7,8 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Tue, 03 Mar 2015 06:57:58 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2015 19:29:23 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Golang Method</title>
+      <link>http://localhost:1313/golang-method/</link>
+      <pubDate>Tue, 03 Mar 2015 19:29:23 -0500</pubDate>
+      
+      <guid>http://localhost:1313/golang-method/</guid>
+      <description>&lt;p&gt;Go has both functions and methods. In Go, a method is a function that is declared with a receiver. A receiver is a value or a pointer of a named or struct type.  All the methods for a given type belong to the type&amp;rsquo;s method set.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s declare a struct type and a method for that type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type User struct {
+    Name string
+    Email string
+}
+
+func (u User) Notify() error
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First we declare a struct type named &lt;strong&gt;User&lt;/strong&gt; and then we declare a method named &lt;strong&gt;Notify&lt;/strong&gt; with a receiver that accepts a value of type &lt;strong&gt;User&lt;/strong&gt;. To call the &lt;strong&gt;Notify&lt;/strong&gt; method we need a value or pointer of type User:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Value of type User can be used to call the method
+// with a value receiver.
+bill := User{“Bill”, “bill@email.com”}
+bill.Notify()
+
+// Pointer of type User can also be used to call a method
+// with a value receiver.
+jill := &amp;amp;User{“Jill”, “jill@email.com”}
+jill.Notify()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in the case where we are using a pointer, Go adjusts and dereferences the pointer so the call can be made. Be aware that when the receiver is not a pointer, the method is operating against a copy of the receiver value.&lt;/p&gt;
+
+&lt;p&gt;If you are unsure about when to use a value or a pointer for the receiver, always use pointer. The Go wiki has a great set of &lt;a href=&#34;https://code.google.com/p/go-wiki/wiki/CodeReviewComments#Receiver_Type&#34;&gt;rules&lt;/a&gt; that you can follow.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Moving from Ghost to HUGO</title>
