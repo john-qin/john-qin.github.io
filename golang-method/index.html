@@ -7,7 +7,7 @@
 
   	<meta property="og:title" content=" Golang Method &middot;  JOHN QIN, a father of two" />
   	<meta property="og:site_name" content="JOHN QIN, a father of two" />
-  	<meta property="og:url" content="http://john-qin.github.io/golang-method/" />
+  	<meta property="og:url" content="http://localhost:1313/golang-method/" />
     
     
   	<meta property="og:type" content="article" />
@@ -28,22 +28,19 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="http://john-qin.github.io/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="http://john-qin.github.io/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="http://localhost:1313/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png" />
     
-    <link rel="stylesheet" type="text/css" href="http://john-qin.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link href="" rel="alternate" type="application/rss+xml" title="JOHN QIN, a father of two" />
 
-    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
-    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
+<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/pygments.css" />
     
     <meta name="generator" content="Hugo 0.14-DEV" />
 
-    <link rel="canonical" href="http://john-qin.github.io/" />
+    <link rel="canonical" href="http://localhost:1313/" />
 
     
 </head>
@@ -54,7 +51,7 @@
 <header class="main-header post-head no-cover">
   <nav class="main-nav clearfix">
 
-    <a class="back-button icon-arrow-left" href="http://john-qin.github.io/">Home</a>
+    <a class="back-button icon-arrow-left" href="http://localhost:1313/">Home</a>
     <a class="subscribe-button icon-feed" href="">Subscribe</a>
   </nav>
 </header>
@@ -76,7 +73,7 @@
           </time>
 
          
-          <span class="post-tag small"><a href="http://john-qin.github.io/tags/golang/">#Golang</a></span>
+          <span class="post-tag small"><a href="http://localhost:1313/tags/golang/">#Golang</a></span>
          
         </section>
     </header>
@@ -86,26 +83,27 @@
 
 <p>Let&rsquo;s declare a struct type and a method for that type:</p>
 
-<pre><code class="language-go">type User struct {
-    Name string
-    Email string
-}
-
-func (u User) Notify() error
-</code></pre>
+<p><div class="highlight"><pre><span class="kd">type</span> <span class="nx">User</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Name</span> <span class="kt">string</span>
+    <span class="nx">Email</span> <span class="kt">string</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">u</span> <span class="nx">User</span><span class="p">)</span> <span class="nx">Notify</span><span class="p">()</span> <span class="kt">error</span>
+</pre></div>
+</p>
 
 <p>First we declare a struct type named <strong>User</strong> and then we declare a method named <strong>Notify</strong> with a receiver that accepts a value of type <strong>User</strong>. To call the <strong>Notify</strong> method we need a value or pointer of type User:</p>
 
-<pre><code class="language-go">// Value of type User can be used to call the method
-// with a value receiver.
-bill := User{“Bill”, “bill@email.com”}
-bill.Notify()
+<p><div class="highlight"><pre><span class="c1">// Value of type User can be used to call the method</span>
+<span class="c1">// with a value receiver.</span>
+<span class="nx">bill</span> <span class="o">:=</span> <span class="nx">User</span><span class="p">{</span><span class="s">&quot;Bill&quot;</span><span class="p">,</span> <span class="s">&quot;bill@email.com&quot;</span><span class="p">}</span>
+<span class="nx">bill</span><span class="p">.</span><span class="nx">Notify</span><span class="p">()</span>
 
-// Pointer of type User can also be used to call a method
-// with a value receiver.
-jill := &amp;User{“Jill”, “jill@email.com”}
-jill.Notify()
-</code></pre>
+<span class="c1">// Pointer of type User can also be used to call a method</span>
+<span class="c1">// with a value receiver.</span>
+<span class="nx">jill</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">User</span><span class="p">{</span><span class="s">&quot;Jill&quot;</span><span class="p">,</span> <span class="s">&quot;jill@email.com&quot;</span><span class="p">}</span>
+<span class="nx">jill</span><span class="p">.</span><span class="nx">Notify</span><span class="p">()</span>
+</pre></div>
+</p>
 
 <p>in the case where we are using a pointer, Go adjusts and dereferences the pointer so the call can be made. Be aware that when the receiver is not a pointer, the method is operating against a copy of the receiver value.</p>
 
@@ -121,9 +119,9 @@ jill.Notify()
 
 
     <section class="author">
-        <h4><a href="http://john-qin.github.io/">John Qin</a></h4>
+        <h4><a href="http://localhost:1313/">John Qin</a></h4>
         
-            <p>Read <a href="http://john-qin.github.io/">more posts</a> by this author.</p>
+            <p>Read <a href="http://localhost:1313/">more posts</a> by this author.</p>
         
         <div class="author-meta">
             
@@ -148,9 +146,12 @@ jill.Notify()
     </footer>
 
     
-    <script type="text/javascript" src="http://john-qin.github.io/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://john-qin.github.io/js/index.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/index.js"></script>
 
-</body>
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
 

@@ -2,44 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JOHN QIN, a father of two</title>
-    <link>http://john-qin.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on JOHN QIN, a father of two</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Tue, 03 Mar 2015 19:29:23 -0500</lastBuildDate>
-    <atom:link href="http://john-qin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Golang Method</title>
-      <link>http://john-qin.github.io/golang-method/</link>
+      <link>http://localhost:1313/golang-method/</link>
       <pubDate>Tue, 03 Mar 2015 19:29:23 -0500</pubDate>
       
-      <guid>http://john-qin.github.io/golang-method/</guid>
+      <guid>http://localhost:1313/golang-method/</guid>
       <description>&lt;p&gt;Go has both functions and methods. In Go, a method is a function that is declared with a receiver. A receiver is a value or a pointer of a named or struct type.  All the methods for a given type belong to the type&amp;rsquo;s method set.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s declare a struct type and a method for that type:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type User struct {
-    Name string
-    Email string
-}
-
-func (u User) Notify() error
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;Name&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;Email&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Notify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;First we declare a struct type named &lt;strong&gt;User&lt;/strong&gt; and then we declare a method named &lt;strong&gt;Notify&lt;/strong&gt; with a receiver that accepts a value of type &lt;strong&gt;User&lt;/strong&gt;. To call the &lt;strong&gt;Notify&lt;/strong&gt; method we need a value or pointer of type User:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Value of type User can be used to call the method
-// with a value receiver.
-bill := User{“Bill”, “bill@email.com”}
-bill.Notify()
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c1&#34;&gt;// Value of type User can be used to call the method&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;// with a value receiver.&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;bill&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Bill&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;bill@email.com&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;bill&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Notify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 
-// Pointer of type User can also be used to call a method
-// with a value receiver.
-jill := &amp;amp;User{“Jill”, “jill@email.com”}
-jill.Notify()
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&#34;c1&#34;&gt;// Pointer of type User can also be used to call a method&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;// with a value receiver.&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;jill&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Jill&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;jill@email.com&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;jill&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Notify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;in the case where we are using a pointer, Go adjusts and dereferences the pointer so the call can be made. Be aware that when the receiver is not a pointer, the method is operating against a copy of the receiver value.&lt;/p&gt;
 
