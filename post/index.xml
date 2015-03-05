@@ -37,21 +37,21 @@ Now that your MySQL database is running, you will want to run a simple security 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo mysql_secure_installation
 &lt;/pre&gt;&lt;/div&gt;
 
-The prompt will ask you for your current root password (the MySQL admin user, root). Since you just installed MySQL, you most likely won’t have one, so leave it blank by pressing RETURN. Then the prompt will ask you if you want to set a root password. Go ahead and enter Y, and follow the instructions.&lt;/p&gt;
+The prompt will ask you for your current root password (the MySQL admin user, root). Since you just installed MySQL, you most likely won&amp;rsquo;t have one, so leave it blank by pressing RETURN. Then the prompt will ask you if you want to set a root password. Go ahead and enter Y, and follow the instructions.&lt;/p&gt;
 
 &lt;h4 id=&#34;create-a-user-for-remote-login:97ddc83d2ccffc4f890d5cfdd28055ee&#34;&gt;Create a user for remote login&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;mysql -uroot -p
 
 // allow user to log in from a specific host
-create user &lt;span class=&#34;s1&#34;&gt;&amp;#39;Username&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;11.11.11.1&amp;#39;&lt;/span&gt; identified by &lt;span class=&#34;s1&#34;&gt;&amp;#39;Abcd1234567’;&lt;/span&gt;
+create user &lt;span class=&#34;s1&#34;&gt;&amp;#39;Username&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;11.11.11.1&amp;#39;&lt;/span&gt; identified by &lt;span class=&#34;s1&#34;&gt;&amp;#39;Abcd1234567&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
-&lt;span class=&#34;s1&#34;&gt;// allow user to log in from anywhere&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;create user &amp;#39;&lt;/span&gt;Username&lt;span class=&#34;s1&#34;&gt;&amp;#39;@&amp;#39;&lt;/span&gt;%&lt;span class=&#34;s1&#34;&gt;&amp;#39; identified by &amp;#39;&lt;/span&gt;Abcd1234567’&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+// allow user to log in from anywhere
+create user &lt;span class=&#34;s1&#34;&gt;&amp;#39;Username&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified by &lt;span class=&#34;s1&#34;&gt;&amp;#39;Abcd1234567&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 // grant privileges to user
-grant all privileges on *.* to &lt;span class=&#34;s1&#34;&gt;&amp;#39;qinking126&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;11.11.11.11’;&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;grant all privileges on *.* to &amp;#39;&lt;/span&gt;qinking126’@&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;%’&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+grant all privileges on *.* to &lt;span class=&#34;s1&#34;&gt;&amp;#39;qinking126&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;11.11.11.11&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+grant all privileges on *.* to &lt;span class=&#34;s1&#34;&gt;&amp;#39;qinking126&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
