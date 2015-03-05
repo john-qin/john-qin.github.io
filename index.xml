@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JOHN QIN, a father of two</title>
-    <link>http://localhost:1313/</link>
+    <link>http://john-qin.github.io/</link>
     <description>Recent content on JOHN QIN, a father of two</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Wed, 04 Mar 2015 20:01:23 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://john-qin.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Golang FAQ</title>
-      <link>http://localhost:1313/golang-faq/</link>
+      <link>http://john-qin.github.io/golang-faq/</link>
       <pubDate>Wed, 04 Mar 2015 20:01:23 -0500</pubDate>
       
-      <guid>http://localhost:1313/golang-faq/</guid>
+      <guid>http://john-qin.github.io/golang-faq/</guid>
       <description>
 
 &lt;h4 id=&#34;what-does-an-underscore-in-front-of-an-import-statement-mean:d6285ae886e65156d09727c7ef74f774&#34;&gt;What does an underscore in front of an import statement mean?&lt;/h4&gt;
@@ -49,10 +49,10 @@ Will do the same as:
     
     <item>
       <title>Golang Method</title>
-      <link>http://localhost:1313/golang-method/</link>
+      <link>http://john-qin.github.io/golang-method/</link>
       <pubDate>Tue, 03 Mar 2015 19:29:23 -0500</pubDate>
       
-      <guid>http://localhost:1313/golang-method/</guid>
+      <guid>http://john-qin.github.io/golang-method/</guid>
       <description>&lt;p&gt;Go has both functions and methods. In Go, a method is a function that is declared with a receiver. A receiver is a value or a pointer of a named or struct type.  All the methods for a given type belong to the type&amp;rsquo;s method set.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s declare a struct type and a method for that type:&lt;/p&gt;
