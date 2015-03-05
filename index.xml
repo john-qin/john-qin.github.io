@@ -7,8 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Wed, 04 Mar 2015 20:01:23 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2015 20:01:23 -0500</lastBuildDate>
     <atom:link href="http://john-qin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to install mysql on FreeBSD 10.1</title>
+      <link>http://john-qin.github.io/how-to-install-mysql-on-freebsd-10.1/</link>
+      <pubDate>Thu, 05 Mar 2015 20:01:23 -0500</pubDate>
+      
+      <guid>http://john-qin.github.io/how-to-install-mysql-on-freebsd-10.1/</guid>
+      <description>
+
+&lt;h4 id=&#34;install-mysql:97ddc83d2ccffc4f890d5cfdd28055ee&#34;&gt;Install MySQL&lt;/h4&gt;
+
+&lt;p&gt;To install MySQL 5.6 using pkg, use this command:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo pkg install mysql56-server
+&lt;/pre&gt;&lt;/div&gt;
+
+Enter &lt;strong&gt;y&lt;/strong&gt; at the confirmation prompt. This installs the MySQL server and client packages.
+To enable MySQL server as a service, add &lt;strong&gt;mysql_enable=&amp;ldquo;YES&amp;rdquo;&lt;/strong&gt; to the &lt;strong&gt;/etc/rc.conf&lt;/strong&gt; file. This &lt;strong&gt;sysrc&lt;/strong&gt; command will do just that:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo sysrc &lt;span class=&#34;nv&#34;&gt;mysql_enable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes
+&lt;/pre&gt;&lt;/div&gt;
+
+Now start the MySQL server:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo service mysql-server start
+&lt;/pre&gt;&lt;/div&gt;
+
+Now that your MySQL database is running, you will want to run a simple security script that will remove some dangerous defaults and slightly restrict access to your database system. Start the interactive script by running this command:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo mysql_secure_installation
+&lt;/pre&gt;&lt;/div&gt;
+
+The prompt will ask you for your current root password (the MySQL admin user, root). Since you just installed MySQL, you most likely won’t have one, so leave it blank by pressing RETURN. Then the prompt will ask you if you want to set a root password. Go ahead and enter Y, and follow the instructions.&lt;/p&gt;
+
+&lt;h4 id=&#34;create-a-user-for-remote-login:97ddc83d2ccffc4f890d5cfdd28055ee&#34;&gt;Create a user for remote login&lt;/h4&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;mysql -uroot -p
+
+// allow user to log in from a specific host
+create user &lt;span class=&#34;s1&#34;&gt;&amp;#39;Username&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;11.11.11.1&amp;#39;&lt;/span&gt; identified by &lt;span class=&#34;s1&#34;&gt;&amp;#39;Abcd1234567’;&lt;/span&gt;
+
+&lt;span class=&#34;s1&#34;&gt;// allow user to log in from anywhere&lt;/span&gt;
+&lt;span class=&#34;s1&#34;&gt;create user &amp;#39;&lt;/span&gt;Username&lt;span class=&#34;s1&#34;&gt;&amp;#39;@&amp;#39;&lt;/span&gt;%&lt;span class=&#34;s1&#34;&gt;&amp;#39; identified by &amp;#39;&lt;/span&gt;Abcd1234567’&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+// grant privileges to user
+grant all privileges on *.* to &lt;span class=&#34;s1&#34;&gt;&amp;#39;qinking126&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;11.11.11.11’;&lt;/span&gt;
+&lt;span class=&#34;s1&#34;&gt;grant all privileges on *.* to &amp;#39;&lt;/span&gt;qinking126’@&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;%’&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;click here to learn more on &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql&#34;&gt;how to create a new user and grant permissions in my sql&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Golang FAQ</title>
